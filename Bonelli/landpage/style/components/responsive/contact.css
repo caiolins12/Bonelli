@@ -1,0 +1,171 @@
+/* Contact Section */
+@media (max-width: 1023px) {
+    .contact-section {
+        padding: 3rem 0;
+    }
+    
+    .contact-section h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-options {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-section {
+        padding: 4rem 1rem 2rem;
+    }
+    
+    .contact-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+        padding: 0 1rem;
+        line-height: 1.4;
+    }
+    
+    .contact-options {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .contact-option {
+        width: 100%;
+        max-width: 280px;
+        padding: 2rem 1.5rem;
+        margin: 0;
+        background-color: rgba(20,20,20,0.9); 
+        background-image: linear-gradient(
+            110deg,
+            transparent 30%,
+            rgba(220, 0, 0, var(--glow-color-intensity, 0)) 48%, 
+            rgba(200, 0, 0, calc(var(--glow-color-intensity, 0) * 0.7)) 52%, 
+            transparent 70%
+        );
+        background-size: 250% 250%; 
+        background-position: center var(--glow-y-pos, 70%); 
+        border: 1px solid rgba(255, 70, 70, var(--glow-border-intensity, 0)); 
+        border-radius: 12px; 
+        transition: none;
+        pointer-events: auto;
+    }
+
+    /* Disable any hover styling - but preserve the reflective effect */
+    .contact-option:hover {
+        background-color: rgba(20,20,20,0.9);
+        background-image: linear-gradient(
+            110deg,
+            transparent 30%,
+            rgba(220, 0, 0, var(--glow-color-intensity, 0)) 48%, 
+            rgba(200, 0, 0, calc(var(--glow-color-intensity, 0) * 0.7)) 52%, 
+            transparent 70%
+        );
+        background-position: center var(--glow-y-pos, 70%);
+        border-color: rgba(255, 70, 70, var(--glow-border-intensity, 0));
+        transform: none;
+        box-shadow: none;
+    }
+    
+    /* Make sure the icon is always visible and properly styled */
+    .contact-option .icon {
+        height: 70px;
+        width: 70px;
+        margin-bottom: 1.5rem;
+        transition: none;
+        background: rgba(40, 40, 40, 0.8);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        /* Ensure icon is always visible */
+        opacity: 1 !important;
+    }
+
+    /* Make sure icon content (SVG, images) are always visible */
+    .contact-option .icon svg,
+    .contact-option .icon img {
+        opacity: 1 !important;
+        visibility: visible !important;
+        filter: none !important;
+    }
+
+    /* Completely disable any hover effects on icons */
+    .contact-option:hover .icon {
+        transform: none !important;
+        filter: none !important;
+        background-color: rgba(40, 40, 40, 0.8) !important;
+        box-shadow: none;
+        opacity: 1 !important;
+    }
+    
+    /* Disable any hover effects on icon content */
+    .contact-option:hover .icon svg,
+    .contact-option:hover .icon img {
+        transform: none !important;
+        filter: none !important;
+        opacity: 1 !important;
+    }
+    
+    .contact-option h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .contact-option p {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        opacity: 0.8;
+    }
+    
+    .contact-button {
+        width: 100%;
+        padding: 0.9rem;
+        font-size: 0.95rem;
+        transition: transform 0.2s ease;
+        border-radius: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Add active/press effect to all buttons */
+    .contact-button:active {
+        transform: scale(0.95);
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Completely disable any hover effects on buttons */
+    .contact-option:hover .contact-button {
+        background-color: inherit !important;
+        color: inherit !important;
+        transform: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Only allow the scroll-activated effect to work (which is controlled by JS) */
+    .contact-option.scroll-activated-hover .icon {
+        filter: drop-shadow(0 0 8px rgba(255, 100, 100, 0.7)) !important;
+        transform: scale(1.1) !important;
+        opacity: 1 !important;
+    }
+
+    /* Enhanced button effect when scroll-activated */
+    .contact-option.scroll-activated-hover .contact-button {
+        background-color: #ff0000 !important; 
+        color: #ffffff !important;
+        transform: scale(1.05) !important;
+        box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3) !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    /* Add active state for button when scroll-activated */
+    .contact-option.scroll-activated-hover .contact-button:active {
+        transform: scale(0.98) !important;
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(255, 0, 0, 0.2) !important;
+    }
+}

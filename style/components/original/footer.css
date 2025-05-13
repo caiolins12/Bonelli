@@ -1,0 +1,31 @@
+/* Footer section styling */
+footer {
+  background-color: #000;
+  padding: 40px 24px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Footer navigation styling */
+footer nav {
+  margin-bottom: 24px;
+}
+
+/* Footer link styling */
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for footer links */
+footer a:hover {
+  opacity: 0.8;
+}
+
+/* Footer copyright text */
+footer p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}

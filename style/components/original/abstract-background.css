@@ -1,0 +1,82 @@
+/* ABSTRACT GRADIENT BACKGROUND */
+.abstract-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* This will span multiple sections */
+.abstract-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 300%; /* Much taller than viewport to span across sections */
+    background: 
+        /* Base dark background */
+        linear-gradient(180deg, 
+            rgba(0, 0, 0, 1) 0%,
+            rgba(20, 0, 0, 1) 33%, 
+            rgba(10, 0, 0, 1) 67%, 
+            rgba(0, 0, 0, 1) 100%),
+        /* Abstract blob 1 */
+        radial-gradient(circle at 20% 30%, 
+            rgba(255, 0, 0, 0.3) 0%, 
+            transparent 25%),
+        /* Abstract blob 2 */
+        radial-gradient(circle at 80% 20%, 
+            rgba(200, 0, 0, 0.4) 0%, 
+            transparent 35%),
+        /* Abstract blob 3 */
+        radial-gradient(ellipse at 40% 50%, 
+            rgba(150, 0, 0, 0.2) 0%, 
+            transparent 40%),
+        /* Abstract blob 4 */
+        radial-gradient(ellipse at 60% 70%, 
+            rgba(100, 0, 0, 0.3) 0%, 
+            transparent 30%),
+        /* Abstract blob 5 */
+        radial-gradient(circle at 10% 90%, 
+            rgba(180, 0, 0, 0.2) 0%, 
+            transparent 20%);
+}
+
+/* Section-specific overlays to create a darkening effect */
+.testimonials-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}

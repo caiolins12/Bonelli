@@ -187,7 +187,6 @@
         z-index: auto !important; /* Retain to override desktop styles */
         position: relative !important;
         transform: none !important;
-        border: none !important;
         padding: 0 !important;
         margin: 0 !important; /* Ensure no specific margins from desktop */
         flex-shrink: 0 !important; 

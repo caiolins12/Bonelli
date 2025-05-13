@@ -3,6 +3,7 @@
     .argumento1 {
         flex-direction: column;
         padding: 2rem 1rem;
+        background: linear-gradient(180deg, #000 0%, #200000 18%, #400000 38%, #200000 68%, #000 95%, #000 100%);
     }
     
     .argumento-texto {
@@ -19,6 +20,7 @@
     .argumento1 {
         padding: 2rem 1rem; 
         min-height: auto;
+        background: linear-gradient(180deg, #000 0%, #200000 15%, #400000 32%, #200000 60%, #000 92%, #000 100%);
     }
     
     .argumento1-inner {

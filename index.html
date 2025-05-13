@@ -26,8 +26,9 @@
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
       width: 100vw; height: 100vh;
-      background: #000; /* Ou um gradiente, se preferir */
+      background: #000;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       z-index: 9999;
@@ -44,13 +45,29 @@
       width: 48px;
       height: 48px;
       animation: spin 1s linear infinite;
+      margin-bottom: 18px;
     }
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+    .loading-status {
+      color: #fff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      margin-top: 0.5rem;
+      animation: blink 1.2s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
   </style>
-  <div id="preloader"><div class="loader"></div></div>
+  <div id="preloader">
+    <div class="loader"></div>
+    <div class="loading-status" id="loading-status">Carregando...</div>
+  </div>
   <!-- Abstract Background Container -->
   <div class="abstract-bg-container">
     <div class="abstract-background"></div>
@@ -195,15 +212,38 @@
   <script src="scripts/hero-buttons.js" defer></script>
   <script src="scripts/hero-scripts.js" defer></script>
   <script>
-    // Aguarda o carregamento completo de todos os recursos
+    // Atualiza o texto de status dinamicamente
+    var statusTexts = [
+      'Carregando...',
+      'Preparando imagens...',
+      'Otimizando experiência...',
+      'Quase pronto!'
+    ];
+    var statusIndex = 0;
+    var statusEl = document.getElementById('loading-status');
+    var statusInterval = setInterval(function() {
+      statusIndex = (statusIndex + 1) % statusTexts.length;
+      if (statusEl) statusEl.textContent = statusTexts[statusIndex];
+    }, 1200);
+
     window.addEventListener('load', function() {
       var preloader = document.getElementById('preloader');
       if (preloader) {
         preloader.classList.add('hide');
         setTimeout(function() {
           preloader.style.display = 'none';
-        }, 600); // Aguarda a transição
+          clearInterval(statusInterval);
+        }, 600);
       }
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('img').forEach(function(img) {
+        if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+        if (!img.hasAttribute('width') && img.naturalWidth) img.setAttribute('width', img.naturalWidth);
+        if (!img.hasAttribute('height') && img.naturalHeight) img.setAttribute('height', img.naturalHeight);
+      });
     });
   </script>
 </body>

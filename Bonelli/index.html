@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+  <!-- Mobile status bar theming -->
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="description" content="Bonelli Films: produtora de vídeos e filmes que eterniza momentos e histórias de forma única e envolvente.">
+  <meta name="keywords" content="vídeo, filme, produtora, audiovisual, Bonelli, eventos, empresa, storytelling, produção, vídeo institucional, casamento, evento, marketing, São Paulo">
+  <title>Bonelli</title>  <!-- Preconnect to Google Fonts -->  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="content/media/Logo-Ico-Wider.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="content/media/Logo-Ico-Wider.ico">
+  <link rel="apple-touch-icon" href="content/media/Logo Ico.png">
+  <!-- Preload main stylesheet -->
+  <link rel="preload" href="style/components/original/index.css" as="style">
+  <link rel="stylesheet" href="style/components/original/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Abstract Background Container -->
+  <div class="abstract-bg-container">
+    <div class="abstract-background"></div>
+  </div>
+  
+  <!-- Cabeçalho (Header com Logo e Menu) -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="content/media/Logo Transparente.png" alt="Logo Bonelli Films - Marca principal">
+      </div>
+      <div class="menu-container">
+        <div class="menu-toggle">
+          <span></span>
+        </div>
+        <div class="botoes-acoes">
+          <a href="#contato">Acompanhar pedido</a>
+          <a href="#sobre">Sobre nós</a>
+          <a href="https://www.instagram.com/bonellifilms/" target="_blank">Portfólio</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </div>
+    </nav>
+    <div class="menu-overlay"></div>
+  </header>
+  <!-- Seção Principal (Hero Section) -->
+  <main>
+    <section class="hero">
+      <h1>Audio/Visual Operacional</h1>
+      <p>Faça com que sua história seja inesquecível. A Bonelli Films eterniza o seu momento!</p>
+      <div class="hero-buttons">
+        <a href="#" class="primary-button">Conheça nosso trabalho</a>
+        <a href="#" class="secondary-button">Junte-se a nós</a>
+      </div>
+      <div class="hero-gifs">
+        <img src="content/media/BonelliGif1.gif" alt="Animação Bonelli 1" loading="lazy">
+        <img src="content/media/BonelliGif2.gif" alt="Animação Bonelli 2" loading="lazy">
+        <img src="content/media/BonelliGif3.gif" alt="Animação Bonelli 3" loading="lazy">
+        <img src="content/media/BonelliGif4.gif" alt="Animação Bonelli 4" loading="lazy">
+        <img src="content/media/BonelliGif5.gif" alt="Animação Bonelli 5" loading="lazy">
+      </div>
+    </section>
+
+    <!-- Seção de Parceiros -->
+    <section class="parceiros">
+      <h2>Essas marcas já confiam no nosso trabalho:</h2>
+      <div class="linha-parceiros1">
+        <img src="content/media/Logo Transparente.png" alt="Logo Parceiro 1 - Bonelli Films" loading="lazy">
+        <img src="content/media/Logo Transparente.png" alt="Logo Parceiro 2 - Bonelli Films" loading="lazy">
+        <img src="content/media/Logo Transparente.png" alt="Logo Parceiro 3 - Bonelli Films" loading="lazy">
+        <img src="content/media/Logo Transparente.png" alt="Logo Parceiro 4 - Bonelli Films" loading="lazy">
+      </div>
+      <div class="linha-parceiros2">
+        <img src="content/media/Logo Transparente.png" alt="Logo Parceiro 5 - Bonelli Films" loading="lazy">
+        <img src="content/media/Logo Transparente.png" alt="Logo Parceiro 6 - Bonelli Films" loading="lazy">
+      </div>
+    </section>
+
+    <!-- Seção de Promoção da Marca  -->
+    <section class="argumento1" id="sobre">
+      <div class="argumento1-inner">
+        <div class="argumento-texto">
+          <h2>O que fazemos?</h2>
+          <p>A Bonelli Films é uma produtora de vídeos e filmes que se destaca pela sua capacidade de contar histórias de forma única e envolvente. Com uma equipe apaixonada e experiente, criamos conteúdos audiovisuais que capturam a essência de cada projeto.</p>
+          <p>Nosso foco é transformar ideias em realidade, seja para empresas, eventos ou projetos pessoais. Utilizamos tecnologia de ponta e técnicas inovadoras para garantir que cada produção seja memorável e impactante.</p>
+        </div>
+        <div class="video-container">
+          <div class="video-capa" onclick="playVideo(this)">
+            <img src="content/media/ThumbPromoVid.png" alt="Thumbnail do vídeo institucional Bonelli Films" loading="lazy">
+            <div class="botao-play">▶</div>
+          </div>
+          <video class="video-real" src="caminho/do-video.mp4" controls></video>
+        </div>
+      </div>
+    </section>    
+    
+    <!-- Seção de Depoimentos (carrossel) -->
+    <section class="testimonials-container">     
+      <h2 class="testimonials-title">Veja o que os nossos clientes dizem:</h2>
+      <div class="testimonials"></div>
+      <div class="testimonial-dots"></div>
+    </section>
+
+    <!-- Seção de Contato e Redes Sociais - CORRIGIDA -->
+    <section class="contact-section" id="contato">
+      <div class="container">
+        <h2>Comece agora a contar a sua história:</h2>
+        <div class="contact-options">
+          <div class="contact-option">
+            <div class="icon">
+              <!-- Email SVG Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+                <path fill="#ff0000" d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M20,8l-8,5L4,8V6l8,5l8-5V8z"/>
+              </svg>
+            </div>
+            <h3>Email</h3>
+            <p>contato@bonellifilms.com.br</p>
+            <a href="mailto:contato@bonellifilms.com.br" class="contact-button">Enviar email</a>
+          </div>
+          <div class="contact-option">
+            <div class="icon">
+              <!-- Simple phone icon with red elements to match other icons -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
+                <circle cx="12" cy="12" r="11" fill="transparent" stroke="#ff0000" stroke-width="1.5"/>
+                <path fill="#ff0000" d="M17.6,15.8c-0.3,0.7-1.1,1.2-1.9,1.2c-0.2,0-0.3,0-0.5,0c-1.4-0.3-2.8-0.9-3.9-1.8c-1-0.8-2-1.8-2.7-2.9 c-0.8-1.1-1.3-2.4-1.5-3.8c-0.1-0.7,0.2-1.4,0.7-1.9l0.8-0.8c0.2-0.2,0.5-0.2,0.7,0l2.4,2.4c0.2,0.2,0.2,0.5,0,0.7L11,10.6 c-0.2,0.2-0.2,0.5-0.1,0.7c0.4,0.6,0.9,1.1,1.5,1.5c0.2,0.1,0.5,0.1,0.7-0.1l0.8-0.8c0.2-0.2,0.5-0.2,0.7,0l2.5,2.5 C17.9,14.6,17.9,15.4,17.6,15.8z"/>
+              </svg>
+            </div>
+            <h3>WhatsApp</h3>
+            <p>Resposta rápida</p>
+            <a href="https://wa.me/551199999999" class="contact-button">Fale conosco</a>
+          </div>
+          <div class="contact-option">
+            <div class="icon">
+              <!-- Instagram SVG Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+                <path fill="#ff0000" d="M12,2.2c3.2,0,3.6,0,4.8,0.1c3.3,0.1,4.8,1.7,4.9,4.9c0.1,1.3,0.1,1.6,0.1,4.8c0,3.2,0,3.6-0.1,4.8c-0.1,3.2-1.7,4.8-4.9,4.9c-1.3,0.1-1.6,0.1-4.8,0.1c-3.2,0-3.6,0-4.8-0.1c-3.3-0.1-4.8-1.7-4.9-4.9c-0.1-1.3-0.1-1.6-0.1-4.8c0-3.2,0-3.6,0.1-4.8c0.1-3.2,1.7-4.8,4.9-4.9C8.4,2.2,8.8,2.2,12,2.2z M12,0C8.7,0,8.3,0,7.1,0.1c-4.4,0.2-6.8,2.6-7,7C0,8.3,0,8.7,0,12s0,3.7,0.1,4.9c0.2,4.4,2.6,6.8,7,7C8.3,24,8.7,24,12,24s3.7,0,4.9-0.1c4.4-0.2,6.8-2.6,7-7C24,15.7,24,15.3,24,12s0-3.7-0.1-4.9c-0.2-4.4-2.6-6.8-7-7C15.7,0,15.3,0,12,0z M12,5.8c-3.4,0-6.2,2.8-6.2,6.2s2.8,6.2,6.2,6.2s6.2-2.8,6.2-6.2C18.2,8.6,15.4,5.8,12,5.8z M12,16c-2.2,0-4-1.8-4-4c0-2.2,1.8-4,4-4s4,1.8,4,4C16,14.2,14.2,16,12,16z M18.4,4.2c-0.8,0-1.4,0.6-1.4,1.4S17.6,7,18.4,7c0.8,0,1.4-0.6,1.4-1.4S19.2,4.2,18.4,4.2z"/>
+              </svg>
+            </div>
+            <h3>Instagram</h3>
+            <p>@bonellifilms</p>
+            <a href="https://instagram.com/bonellifilms" class="contact-button">Siga-nos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="links-footer">
+      <a href="#">Termos</a>
+      <a href="#">Privacidade</a>
+      <a href="#">Contato</a>
+    </div>
+    <p>© 2024 Bonelli Films. Todos os direitos reservados.</p>
+  </footer>
+  <!-- Scripts -->
+  <script src="scripts/nav.js" defer></script>
+  <script src="scripts/scroll.js" defer></script>
+  <script src="scripts/video-player.js" defer></script>
+  <script src="scripts/testimonials.js" defer></script>
+  <script src="scripts/hero-buttons.js" defer></script>
+  <script src="scripts/hero-scripts.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+/* Partners Section */
+@media (max-width: 767px) {
+    .parceiros {
+        padding: 4rem 1rem;
+    }
+    
+    .parceiros h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+        line-height: 1.4;
+    }
+    
+    .linha-parceiros1,
+    .linha-parceiros2 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+    
+    .parceiros img {
+        width: 120px;
+        height: 50px;
+        margin: 0;
+    }
+}

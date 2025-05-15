@@ -17,7 +17,10 @@
   <!-- Preload main stylesheet -->
   <link rel="preload" href="style/components/original/index.css" as="style">
   <link rel="stylesheet" href="style/components/original/index.css">
+  <link rel="stylesheet" href="style/components/original/loader.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Load page loader script first -->
+  <script src="scripts/page-loader.js"></script>
 </head>
 <body>
   <!-- Abstract Background Container -->
@@ -186,7 +189,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('img').forEach(function(img) {
-        if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+        if (!img.hasAttribute('loading') && !img.src.endsWith('.gif')) img.setAttribute('loading', 'lazy');
         if (!img.hasAttribute('width') && img.naturalWidth) img.setAttribute('width', img.naturalWidth);
         if (!img.hasAttribute('height') && img.naturalHeight) img.setAttribute('height', img.naturalHeight);
       });

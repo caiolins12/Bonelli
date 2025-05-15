@@ -11,6 +11,17 @@
     .container {
         padding: 0 20px;
     }
+    
+    /* Prevent hyphenation globally in responsive views */
+    p, h1, h2, h3, h4, h5, h6, a, span, div {
+        hyphens: none !important;
+        -webkit-hyphens: none !important;
+        -moz-hyphens: none !important;
+        -ms-hyphens: none !important;
+        word-break: keep-all !important;
+        overflow-wrap: normal !important;
+        word-wrap: normal !important;
+    }
 }
 
 @media (max-width: 767px) {
@@ -24,6 +35,17 @@
     
     p {
         font-size: 0.9rem;
+    }
+    
+    /* Reinforce hyphenation prevention on smaller screens */
+    p, h1, h2, h3, h4, h5, h6, a, span, div {
+        hyphens: none !important;
+        -webkit-hyphens: none !important;
+        -moz-hyphens: none !important;
+        -ms-hyphens: none !important;
+        word-break: keep-all !important;
+        overflow-wrap: normal !important;
+        word-wrap: normal !important;
     }
 }
 

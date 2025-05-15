@@ -41,6 +41,16 @@ body {
   overflow-x: hidden;
 }
 
+/* Prevent hyphenation across all text elements */
+p, h1, h2, h3, h4, h5, h6, a, span, div {
+  hyphens: none;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
 body::before {
   content: '';
   position: fixed;

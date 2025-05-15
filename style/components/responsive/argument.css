@@ -11,6 +11,16 @@
         margin-bottom: 0rem; /* Reduced spacing significantly */
     }
     
+    .argumento-texto p {
+        /* Prevent hyphenation */
+        hyphens: none;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        word-break: keep-all;
+        overflow-wrap: normal;
+    }
+    
     .video-container {
         width: 100%;
     }
@@ -35,6 +45,12 @@
     .argumento-texto h2 {
         font-size: 1.8rem;
         margin-bottom: 1.5rem;
+        /* Prevent hyphenation */
+        hyphens: none;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        word-break: keep-all;
     }
     
     .argumento-texto p {
@@ -42,6 +58,14 @@
         line-height: 1.6;
         margin-bottom: 1.5rem;
         padding: 0 0.5rem;
+        /* Prevent hyphenation */
+        hyphens: none;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        word-break: keep-all;
+        overflow-wrap: normal;
+        word-wrap: normal;
     }
     
     .video-container {

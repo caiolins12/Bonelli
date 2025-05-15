@@ -1,7 +1,8 @@
 /* Partners Section */
 @media (max-width: 767px) {
     .parceiros {
-        padding: 4rem 1rem;
+        padding: 9rem 1rem 3.6rem 1rem;
+        background-color: #000000;
     }
     
     .parceiros h2 {
@@ -11,18 +12,64 @@
         line-height: 1.4;
     }
     
-    .linha-parceiros1,
-    .linha-parceiros2 {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2rem;
-        margin: 0 auto;
+    /* Updated grid layout for logos container */
+    .logos-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem 1.5rem;
         max-width: 90%;
+        margin: 0 auto;
+        justify-items: center;
     }
     
+    /* Reset all grid positions for mobile */
+    .logos-container div:nth-child(n) {
+        grid-column: auto;
+        grid-row: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    /* Position Acero logo in the middle spanning both columns */
+    .acero-logo {
+        grid-column: 1 / span 2 !important;
+        justify-self: center;
+    }
+    
+    /* Standardize logo item size */
+    .logo-item {
+        height: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Standard size for all logos - increased by 50% */
     .parceiros img {
-        width: 120px;
-        height: 50px;
-        margin: 0;
+        max-width: 80%;
+        max-height: 80%;
+        transform: scale(1.5);
+        object-fit: contain;
+        opacity: 0.7;
+        filter: brightness(1.2);
+    }
+    
+    /* Special size for BlackSkull and Blackstone (50% larger than the standard) */
+    .blackskull-logo img,
+    .blackstone-logo img {
+        transform: scale(2.25);
+    }
+}
+
+/* For very small screens, adjust spacing */
+@media (max-width: 380px) {
+    .logos-container {
+        gap: 1.5rem 1rem;
+    }
+    
+    .logo-item {
+        height: 90px;
     }
 }
